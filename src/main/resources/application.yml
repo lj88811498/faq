@@ -34,7 +34,7 @@ server:
   port: 18888
   #统一添加前缀路径
   #context-path: /uway/api/v1
-  context-path: /api
+#  context-path: /api/v1
 
 ###################  beetl配置  ###################
 beetl:
@@ -197,10 +197,10 @@ swagger:
 spring:
   profiles: prd
   datasource:
-    url: ${uway_database_urlUway:jdbc:mysql://114.67.201.165:63306/edu?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowMultiQueries=true}
-    username: ${uway_database_userUway:dms}
-    password: ${uway_database_pwdUway:dms686868}
-    db-name: ${uway_database_dbnameUway:edu}
+    url: ${uway_database_urlUway:jdbc:mysql://47.105.81.53:3306/faq?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowMultiQueries=true}
+    username: ${uway_database_userUway:root}
+    password: ${uway_database_pwdUway:0926}
+    db-name: ${uway_database_dbnameUway:faq}
 
 sms:
   ip: smspaas-gateway.jdcloud.com
@@ -227,5 +227,5 @@ springfox:
 swagger:
   #token开关
   key: Authorization
-  tokenSwitch: true
+  tokenSwitch: false
   defaultValue: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsaWNlbnNlIjoibWFkZSBieSBwaWciLCJ1c2VyX25hbWUiOiJtb25rZXkiLCJzY29wZSI6WyJzZXJ2ZXIiXSwiZXhwIjoxNTkwNTg1NDY1LCJ1c2VySWQiOjEyNCwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiIsIlJPTEVfVVNFUiJdLCJqdGkiOiI2MjFkZWNmMi02MWQ2LTQ0ZjctODkwMC1lNjczNmYzYWYxNWQiLCJjbGllbnRfaWQiOiJwaWcifQ.cgkmMgglwOO3ZKYjAFwwcQsTTlq_u5tpaiXbUpZyDx4

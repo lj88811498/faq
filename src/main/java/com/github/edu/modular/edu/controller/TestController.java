@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Random;
 
 @Controller
-@RequestMapping("/test")
+@RequestMapping("/svc")
 public class TestController {
 
     private static String PREFIX = "/code";
@@ -31,7 +31,7 @@ public class TestController {
        return "/test.html";
     }
 
-    @RequestMapping("socket")
+    @RequestMapping("faq")
     public String test() {
         return "/socket/test.html";
     }
@@ -65,19 +65,23 @@ public class TestController {
 
                 String suffix = "</a><br/>";
 
+                String line = "<br/>";
+
                 String context = "";
 
                 for (Faq faq : faqs) {
                     if (faq.getFaqType().equals("2")) {
                         context += info.replaceAll("#id#", faq.getFaqId().toString()) + faq.getFaqInfo() + suffix;
                     } else {
-                        context += faq.getFaqInfo() + suffix;
+                        context += faq.getFaqInfo() + line;
                     }
                 }
 
+                context += "<a href=\"javascript:;\" onclick=\"q(0);a(this.innerHTML,1)\">" + "返回首页" + suffix;
+
                 r.setData(context);
             } else {
-                r.setData("智障机器人正在整理中....还请大侠稍等几日...");
+                r.setData("智障机器人正在学习中....还请大侠稍等几日...");
             }
         } catch (Exception e) {
             r = ExceptionUtil.getException(e);
