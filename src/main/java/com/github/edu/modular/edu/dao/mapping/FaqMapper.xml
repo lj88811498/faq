@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.edu.modular.edu.dao.FaqMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.github.edu.modular.edu.model.Faq">
+        <id column="faq_id" property="faqId" />
+        <result column="faq_pid" property="faqPid" />
+        <result column="faq_type" property="faqType" />
+        <result column="faq_info" property="faqInfo" />
+        <result column="faq_isdelete" property="faqIsdelete" />
+    </resultMap>
+
+</mapper>

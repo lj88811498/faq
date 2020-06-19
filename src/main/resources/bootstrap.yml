@@ -1,0 +1,16 @@
+#spring:
+#  application:
+#    name: edu
+#  cloud:
+#    config:
+#      name: edu
+##      uri: http://172.16.24.194:19008
+#
+#      uri: http://${dataos-config-service:172.16.24.194}:19008
+#      label: master
+#      profile: prod
+#  management:
+#    security:
+#      enabled: false
+#server:
+#  port: 18899
