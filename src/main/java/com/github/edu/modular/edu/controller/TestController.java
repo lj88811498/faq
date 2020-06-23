@@ -73,7 +73,7 @@ public class TestController {
                     if (faq.getFaqType().equals("2")) {
                         context += info.replaceAll("#id#", faq.getFaqId().toString()) + faq.getFaqInfo() + suffix;
                     } else {
-                        context += faq.getFaqInfo() + line;
+                        context += faq.getFaqInfo().replaceAll("#id#", faq.getFaqId().toString()) + line;
                     }
                 }
 
