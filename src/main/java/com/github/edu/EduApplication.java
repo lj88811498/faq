@@ -4,17 +4,15 @@ import com.github.edu.config.properties.GunsProperties;
 import com.github.edu.core.util.SpringContextHolder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 
 /**
  * SpringBoot方式启动类
@@ -24,6 +22,7 @@ import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 @SpringBootApplication
 @EnableScheduling
 //@PropertySource(value = {"file:/data/test/mysql.properties"})
+@EnableRabbit
 public class EduApplication extends WebMvcConfigurerAdapter {
 
     private final static Logger logger = LoggerFactory.getLogger(EduApplication.class);
@@ -47,5 +46,7 @@ public class EduApplication extends WebMvcConfigurerAdapter {
         logger.info("EduApplication is success!");
         Environment env = application.getEnvironment();
         SpringContextHolder.setAppContext(application);
+        System.out.println("www.casd".replace("","1111"));
+
     }
 }

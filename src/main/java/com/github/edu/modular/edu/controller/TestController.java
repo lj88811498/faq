@@ -36,6 +36,15 @@ public class TestController {
         return "/socket/test.html";
     }
 
+    @RequestMapping("a")
+    public String sso() {
+        return "/sso/a.html";
+    }
+    @RequestMapping("b")
+    public String sso2() {
+        return "/sso/b.html";
+    }
+
     @RequestMapping("send")
     @ResponseBody
     public Object send(String sid) throws IOException {
