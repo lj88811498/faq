@@ -189,6 +189,7 @@ public class initSystem extends AbstractGeneratorConfig {
         sysPath = "d:\\test";
         sysPath = "F:\\monkey\\edu\\edu_api";
         sysPath = "E:\\dataos\\服务中心\\问答系统\\edu_api";
+        sysPath = "E:\\dataos\\faq\\faq";
 //        sysPath = "C:\\工作\\edu_api";
         //作者
         String author = "Monkey";
@@ -197,7 +198,7 @@ public class initSystem extends AbstractGeneratorConfig {
 //        String str[] = new String[]{"projects", "projects_trackers"};
 //        String str[] = new String[]{"wikis","wiki_redirects","wiki_pages","wiki_contents","wiki_content_versions"};
 //        String str[] = new String[]{"wikis","wiki_pages","wiki_contents"};
-        String str[] = new String[]{"faq"};
+        String str[] = new String[]{"zb"};
         //String数组针对后续添加表需要设置表名，不能为空，为空则表示全部导入
 //        first(sysPath, author, new String[]{"custom_entities", "custom_field_enumerations", "custom_fields", "custom_fields_projects", "custom_fields_roles", "custom_fields_trackers", "custom_tables", "custom_tables_projects", "custom_tables_roles", "custom_tables_trackers", "custom_values", "custom_workflows", "custom_workflows_projects"});
 
